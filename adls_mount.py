@@ -1,8 +1,4 @@
 # Databricks notebook source
-print('Bheruji')
-
-# COMMAND ----------
-
 dbutils.secrets.listScopes()
 
 # COMMAND ----------

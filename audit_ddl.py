@@ -1,8 +1,4 @@
 # Databricks notebook source
-print("Hello Bheruji") 
-
-# COMMAND ----------
-
 # MAGIC %sql
 # MAGIC CREATE SCHEMA IF NOT EXISTS audit;
 # MAGIC

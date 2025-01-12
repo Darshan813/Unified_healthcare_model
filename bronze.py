@@ -1,8 +1,4 @@
 # Databricks notebook source
-print('Bheruji')
-
-# COMMAND ----------
-
 display(dbutils.fs.mounts())
 
 
