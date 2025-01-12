@@ -1,7 +1,16 @@
 # Project README
 
 ## Project Overview  
-This project focuses on building an ETL pipeline using Azure cloud services and Databricks to efficiently extract, transform, and store data in a medallion architecture (bronze, silver, and gold layers). The goal is to process structured and semi-structured data from various sources, ensure data quality and maintain historical records, and produce aggregated datasets for analysis. The pipeline is fully automated using **Azure Data Factory (ADF)**.
+A robust data pipeline built with Azure and Databricks that processes data through bronze, silver, and gold layers. Data is stored in the Bronze layer as Parquet files, with transformations in the Silver layer ensuring data quality and supporting Slowly Changing Dimensions (SCD Type 2). The final aggregated data is placed in the Gold layer, making it ready for analytics and reporting. Audit tracking handles incremental loading, and Azure Key Vault manages secret storage, strengthening overall security and reliability.
+
+![databricks_pipeline_1](https://github.com/user-attachments/assets/f7c32169-751a-4eaf-a799-c3d2111f6a7b)
+
+![databrick_pipeline](https://github.com/user-attachments/assets/b37cbf93-1e0d-4b18-ac8f-0654f5aba81f)
+
+![Azure_pipeline](https://github.com/user-attachments/assets/0425fdc5-b89c-4085-9176-6058d1f0b161)
+
+![Azure_pipeline_2](https://github.com/user-attachments/assets/2e677e0e-4a83-4174-8bda-c6ddf9d82d45)
+
 
 ## Project Workflow  
 
@@ -55,26 +64,5 @@ This project focuses on building an ETL pipeline using Azure cloud services and 
 - **Historical Data Management**: Implements SCD Type 2 to track changes in dimensions.  
 - **Secure Secrets Management**: Prevents exposure of sensitive credentials.  
 
-## Project Structure  
-```
-project_root/  
-|-- notebooks/  
-|   |-- extract.sql  
-|   |-- transform_silver.py  
-|   |-- load_gold.py  
-|  
-|-- configs/  
-|   |-- key_vault_secrets.yml  
-|  
-|-- data/  
-|   |-- landing_zone/  
-|   |-- bronze_layer/  
-|   |-- silver_layer/  
-|   |-- gold_layer/  
-|  
-|-- logs/  
-|-- README.md  
-```  
-
 ## Conclusion  
-This project demonstrates the use of Azure cloud services, Databricks, and Delta Lake to build an end-to-end automated ETL pipeline that handles large datasets from multiple hospital databases, maintains data quality, and supports historical data analysis.
+Thw project demonstrates the use of Azure cloud services, Databricks, and Delta Lake to build an end-to-end automated ETL pipeline that handles large datasets from multiple hospital databases, maintains data quality, and supports historical data analysis.
