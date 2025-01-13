@@ -1,5 +1,3 @@
-# Project README
-
 ## Project Overview  
 An end-to-end data pipeline built with Azure and Databricks that follows the medallion architecture pattern. The pipeline extracts data from Azure SQL databases (supporting both full and incremental loads based on audit table tracking) and ingests flat files from the ADLS Gen2 landing zone. In the bronze layer, raw data is preserved in Parquet format while maintaining data lineage through audit tables. The silver layer transforms this data into Delta Lake tables, implementing data quality checks, SCD Type 2 for historical tracking, and standardization using Common Data Model patterns. Finally, the gold layer hosts aggregated, business-ready data optimized for analytics and reporting. The entire pipeline leverages Azure Key Vault for secure credential management, ensuring data security throughout the process.
 
